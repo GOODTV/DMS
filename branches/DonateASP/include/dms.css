@@ -1,0 +1,243 @@
+﻿BODY
+{
+    BACKGROUND-COLOR: #EEEEE3;
+    COLOR: #111111;
+    FONT-FAMILY: 新細明體;
+    FONT-SIZE: 9pt;
+    MARGIN-TOP: 4pt;
+    Scrollbar-Face-Color:#EAEAD7; Scrollbar-Arrow-Color:#4B4B4B; Scrollbar-Base-Color:#484824; Scrollbar-Shadow-Color:#FFFFFF; Scrollbar-Dark-Shadow-Color:#FFFFFF; Scrollbar-Highlight-Color:#FFFFFF; Scrollbar-3D-Light-Color:#445FCA;
+}
+TABLE
+{  FONT-SIZE: 9pt;
+   border-collapse: collapse;
+   background-Color:#FFFFFF;
+   border-ColorDark:#59571E;
+   border-ColorLight:#59571E;
+   COLOR:#111111;
+}
+SELECT		{FONT-FAMILY: 新細明體,Arial; FONT-SIZE: 9pt}
+.menufont
+{
+    FONT-FAMILY: 新細明體;FONT-SIZE: 9pt;LINE-HEIGHT: 18px; LETTER-SPACING: 2px;
+}
+.font12
+{
+    FONT-FAMILY: 新細明體;
+    FONT-SIZE: 12pt
+}
+.font11
+{
+    FONT-FAMILY: 新細明體;
+    FONT-SIZE: 11pt
+}
+.top_title {
+	FONT-SIZE: 9pt; COLOR: black; LINE-HEIGHT: 20px; LETTER-SPACING: 1px; TEXT-DECORATION: none
+}
+.cbutton
+{
+    font-family: 新細明體; 
+    font-size: 9pt; 
+    color: #FFFFFF;
+    background-color: #3366CC;
+    line-height: 10px;
+    Padding-top: 4px;
+    Padding-left: 2px;
+    border-width: 1px;
+    border-top-color: 6699FF; border-right-color: 000099; border-left-color: 6699FF; border-bottom-color: 000099 }
+    
+.addbutton
+{
+    font-family: arial; 
+    font-size: 9pt; 
+    color: #FFFFFF;
+    background-color: #008700;
+    line-height: 10px;
+    Padding-top: 4px;
+    Padding-left: 2px;
+    border-width: 1px;
+    border-top-color: 00E100; border-right-color: 000099; border-left-color: 00E100; border-bottom-color: 000099 }
+    
+.delbutton
+{
+    font-family: arial; 
+    font-size: 9pt; 
+    color: #FFFFFF;
+    background-color: #990000;
+    line-height: 10px;
+    Padding-top: 4px;
+    Padding-left: 2px;
+    border-width: 1px;
+    border-top-color: FF0000; border-right-color: 000099; border-left-color: FF0000; border-bottom-color: 000099 }
+        
+.dbutton
+{
+    font-family: arial; 
+    font-size: 9pt; 
+    color: #FFFFFF;
+    background-color: #808080;
+    line-height: 10px;
+    Padding-top: 4px;
+    Padding-left: 2px;
+    border-width: 1px;
+    border-top-color: C0C0C0; border-right-color: 000099; border-left-color: C0C0C0; border-bottom-color: 000099 }
+
+.rbutton
+{
+    font-family: arial; 
+    font-size: 9pt; 
+    color: #FFFFFF;
+    background-color: #CDAD00;
+    line-height: 10px;
+    Padding-top: 4px;
+    Padding-left: 2px;
+    border-width: 1px;
+    border-top-color: C0C0C0; border-right-color: 000099; border-left-color: C0C0C0; border-bottom-color: 000099 }
+    
+A
+{   COLOR: #58582C;CURSOR: hand;FONT-WEIGHT: normal;TEXT-DECORATION: underline }
+A:visited
+{   COLOR: #58582C;FONT-WEIGHT: normal;TEXT-DECORATION: underline}
+A:active
+{   COLOR: #2061b9;FONT-WEIGHT: normal;TEXT-DECORATION: underline}
+A:hover
+{   COLOR: #800000;FONT-WEIGHT: normal;TEXT-DECORATION: none}
+
+A.news:link
+{   COLOR: #58582C;CURSOR: hand;FONT-WEIGHT: bold;TEXT-DECORATION: underline }
+A.news:visited
+{   COLOR: #58582C;FONT-WEIGHT: bold;TEXT-DECORATION: underline}
+A.news:active
+{   COLOR: #2061b9;FONT-WEIGHT: bold;TEXT-DECORATION: underline}
+A.news:hover
+{   COLOR: #800000;FONT-WEIGHT: bold;TEXT-DECORATION: none}
+
+A.top_menu:link {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 15px; FONT-STYLE: normal; FONT-FAMILY: "Verdana", "serif"; TEXT-DECORATION: none
+}
+A.top_menu:visited {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 15px; FONT-STYLE: normal; FONT-FAMILY: "Verdana", "serif"; TEXT-DECORATION: none
+}
+A.top_menu:active {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 15px; FONT-STYLE: normal; FONT-FAMILY: "Verdana", "serif"; TEXT-DECORATION: none
+}
+A.top_menu:hover {
+	FONT-SIZE: 9pt; COLOR: #000000; LINE-HEIGHT: 15px; FONT-STYLE: normal; FONT-FAMILY: "Verdana", "serif"; TEXT-DECORATION: none
+}
+A.tool:link {color:#000080;CURSOR: hand; TEXT-DECORATION: none}
+A.tool:visited {color:#000080;TEXT-DECORATION: none}
+A.tool:active {color:#000080;TEXT-DECORATION: none}
+A.tool:hover {color:#000080;}
+a:link.dirbar      { color: #111111; font-weight: solid; text-decoration: none; cursor: hand }
+a:visited.dirbar   { color: #111111; font-weight: solid; text-decoration: none; cursor: hand }
+a:active.dirbar    { color: #111111; font-weight: solid; text-decoration: none }
+a:hover.dirbar     { color: red; font-weight: solid; text-decoration: none }
+
+BODY.tool
+{
+    BACKGROUND-COLOR: #FFFFFF;
+    COLOR: #111111;
+    FONT-FAMILY: 新細明體;
+    FONT-SIZE: 9pt;
+    MARGIN-TOP: 0pt;
+    MARGIN-RIGHT: 0pt;
+    MARGIN-LEFT:0pt
+}
+BODY.gray
+{
+    BACKGROUND-COLOR: #EEEEE3;
+    COLOR: #111111;
+    FONT-FAMILY: 新細明體;
+    FONT-SIZE: 9pt;
+    MARGIN-TOP: 0pt;
+    MARGIN-LEFT:0pt
+}
+BODY.left
+{
+    BACKGROUND-COLOR: #E5ECFF;
+    COLOR: #111111;
+    FONT-FAMILY: 新細明體;
+    FONT-SIZE: 9pt;
+    MARGIN-TOP: 0pt;
+    MARGIN-RIGHT: 0pt;
+    MARGIN-LEFT:0pt
+}
+H3
+{
+    COLOR: navy;
+    FONT-FAMILY: 標楷體
+}
+TD
+{
+    COLOR: #111111;
+    FONT-FAMILY: 新細明體;
+    FONT-SIZE: 9pt
+}
+TD.td1
+{
+    BACKGROUND-COLOR: #FFFFCC;
+    COLOR: navy;
+    FONT-FAMILY: 新細明體;
+    FONT-SIZE: 9pt
+}
+TD.td2
+{
+    BACKGROUND-COLOR: #FFFCE1;
+    COLOR: navy;
+    FONT-FAMILY: 新細明體;
+    FONT-SIZE: 9pt
+}
+TD.title
+{ Background-Colcor:#dcdcba }
+
+.txtINDEX{
+           FONT-FAMILY: 新細明體;
+           FONT-SIZE: 9pt
+           BORDER-COLOR: #FFFFEC;
+           BACKGROUND-COLOR: #FFFFEC;        
+           BORDER-BOTTOM:#000080 1px solid; 
+           BORDER-LEFT:#999999 1px solid;
+           BORDER-RIGHT:#000080 1px solid; 
+           BORDER-TOP:#999999 1px solid}
+
+.BNT1{
+           FONT-FAMILY: 新細明體;
+           FONT-SIZE: 9pt;           
+           COLOR: #FFFFFF;           
+           background-color:  #4B87C2;filter:Alpha(Opacity=100,FinishOpacity=60 style=2);
+           BORDER: 1PX OUTSET #FFFFFF;                                 
+}
+.table12-bg {background:  url("../images/table02_02.gif"); text-align:center;FONT-SIZE: 10pt;letter-spacing: 1;}
+.table61-bg {background:  url("../images/table06_02.gif");}
+.table62-bg {background:  url("../images/table06_04.gif");}
+.table63-bg {background:  url("../images/table06_05.gif");}
+.table64-bg {background:  url("../images/table06_07.gif");}
+.table612-bg {background:  url("../images/table06_02.gif") repeat-x;padding-top:10px;FONT-SIZE: 10pt;letter-spacing: 1}
+.button-bg {background:  url("../images/bgbutton.gif");text-align:center;color:#000080;}
+.button2-bg {background:  url("../images/bgbutton.gif");text-align:center;color:#800000;font-weight: bold;}
+.button3-bg {background:  url("../images/bgbutton.gif");text-align:center;color:#000080;border-right:1 solid #808080; border-bottom:1 solid #808080;cursor:hand}
+.td-top-padding10 {padding-top:5px}
+.td-top-padding20 {padding-top:15px;padding-right:10px}
+.td-left-padding20 {padding-left:15px}
+.b01-bg {background-color: #ffffff;}
+.b06-bg {background-color: #9dc1d5;}
+.efont {font-family: Arial, Helvetica, sans-serif;font-size:10pt;line-height:150%}
+.td-menu13 {background: #ffcc00;cursor: hand; border-top:1 solid #996600; border-right:1 solid #996600; border-bottom:1 solid #996600;}
+.tab-title {color: #111111;background-color:#FFCC00;cursor: hand;border-top:1 solid #996600; border-right:1 solid #996600; border-bottom:1 solid #996600;}
+.tab-titleon {color: #660000; background-color:#FFFFCC;cursor: hand;border-top:1 solid #996600; border-right:1 solid #996600; border-bottom:1 solid #996600;}
+.font9
+{
+    FONT-FAMILY: 新細明體;FONT-SIZE: 9pt;
+    BACKGROUND-COLOR: #ffffff;BORDER-WIDTH: 1;
+    BORDER-BOTTOM:#000080 1px solid;BORDER-LEFT:#999999 1px solid;
+    BORDER-RIGHT:#000080 1px solid;BORDER-TOP:#999999 1px solid
+}
+.font9T
+{
+    FONT-FAMILY: 新細明體;
+    FONT-SIZE: 9pt;
+    color: #660000;
+    BACKGROUND-COLOR: #ffffcc;
+    BORDER-WIDTH: 1;BORDER-COLOR: #FFFFEC;BORDER-BOTTOM:#000080 1px solid;BORDER-LEFT:#999999 1px solid;
+    BORDER-RIGHT:#000080 1px solid;BORDER-TOP:#999999 1px solid
+}
+.TableTitle	{color:#4B640B; FONT-WEIGHT: bold; font-size:15px; padding-top:4pt;  padding-bottom:2pt}

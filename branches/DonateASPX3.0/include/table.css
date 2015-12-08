@@ -1,0 +1,672 @@
+/*主選單*/
+#menucontrol{
+	position:fixed;
+	top:32px;
+	left:0px;
+	width:15px;
+	height:60px;
+}
+.hidden{
+	display:none;
+}
+
+/* 查詢列 */
+.search{
+	width: inherit;
+	margin:0px 0px 12px 0px;
+	padding:0px;
+	text-align:right;
+	position:relative;
+}
+/* 功能列 */
+.toolbar{
+	margin:0px 0px 12px 0px;
+	padding:0px;
+	text-align:left;
+}
+.toolbar a{
+	display:block;
+	padding:1px;
+	text-decoration:none;
+	width:84px;
+	background:#DCDDDE;
+	border:1px #ccc solid;
+}
+.toolbar a:hover{
+	color:#FFF;
+	text-decoration:none;
+	background:#999;
+	border:1px #666 solid;
+}
+
+.button {
+	display:inline-block;
+	padding:0px;
+	text-decoration:none;
+	width:88px;
+	background:#ffffff url(../images/toolbar_bg.gif) center bottom;
+	border:1px #ccc solid;
+	margin:0px 6px;
+	text-align:center;
+	cursor: pointer;
+	height:26px;
+}
+
+.button:hover{
+	color:#FFF;
+	text-decoration:none;
+	background:#ccc url(../images/toolbar_bg_hover.gif) center bottom;
+	border:1px #666 solid;
+}
+
+/* 資料處理列 */
+.function{
+	width:100%;
+	padding:12px 0px;
+	text-align:center;
+}
+
+/* 系統狀態表格 */
+.table_sys{
+	padding:2px;
+	border:#6CC solid 1px;
+	background:#fff;
+}
+.table_sys th{
+	color:#006;
+	line-height:18px;
+	text-align:right;
+	vertical-align:middle;
+	padding:2px;
+	font-weight:normal;
+	border-bottom:#ccc dotted 1px;
+}
+.table_sys td{
+	border-bottom:#ccc dotted 1px;
+	line-height:18px;
+	vertical-align:middle;
+	padding:2px;
+}
+
+/* 水平資料表格 */
+.table_h{
+	padding:2px;
+	border:#6CC solid 1px;
+	background:#fff;
+}
+.table_h th{
+	color:#006;
+	background:#d8e2e7 url(../images/table_th_bg.gif) repeat-x bottom;
+	line-height:18px;
+	vertical-align:middle;
+	padding:2px;
+	border-bottom:#999 solid 1px;
+}
+.table_h td{
+	border-bottom:#ccc dotted 1px;
+	line-height:18px;
+	vertical-align:middle;
+	padding:2px;
+}
+.table_h tr{
+	color: #666;
+}
+.table_h tr:hover{
+	background:#dedede;
+	color: #333;
+}
+.table_h_nav{
+	background:#c3d4dd;
+	border:none;
+	text-align:center;
+}
+
+/* 垂直資料表格 */
+.table_v{
+	padding:2px;
+	border:#6CC solid 1px;
+	background:#fff;
+	font-size :12px;
+}
+.table_v th {
+    color: #006;
+    background: #c3d4dd;
+    line-height: 18px;
+    padding: 2px;
+    white-space: nowrap;
+}
+.table_v td{
+	border-bottom:#ccc dotted 1px;
+	line-height:16px;
+	padding:2px;
+}
+
+.table_v_nav{
+	background:#c3d4dd;
+	border:none;
+	text-align:center;
+}
+
+/* 垂直資料表格 */
+.table_v2{
+	padding:2px;
+	border:#6CC solid 1px;
+	background:#fff;
+	font-size :13px;
+}
+.table_v2 th{
+	color:#006;
+	background:#c3d4dd;
+	line-height:18px;
+	padding:2px;
+}
+.table_v2 td{
+	border-bottom:#ccc dotted 1px;
+	line-height:16px;
+	padding:2px;
+}
+
+.table_v2_nav{
+	background:#c3d4dd;
+	border:none;
+	text-align:center;
+}
+/* for  server control, RadioButtonList 會包一層 table,所以 CssClass 要設定 */
+.table_noborder{
+	border:none;
+}
+
+.table_noborder td{
+	border:none;
+}
+
+
+
+/* 頁籤 */
+.tab{
+}
+.tab ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.tab ul li{
+	margin:0;
+	padding:0;
+	display:inline;
+}
+.tab ul li a{
+	color:#666;
+	width:77px;
+	line-height:14px;
+	vertical-align:middle;
+	margin:0px;
+	padding: 5px 5px 5px 15px;
+	display:inline-block;
+	text-decoration:none;
+	background:url(../images/tab_ulli_bg_link.gif) no-repeat;
+}
+.tab ul li a:hover{
+	color:#333;
+	text-decoration:none;
+	background:url(../images/tab_ulli_bg_hover.gif) no-repeat;
+}
+#tab_selected{
+	color:#006;
+	text-decoration:none;
+	background:url(../images/tab_ulli_bg_selected.gif) no-repeat;
+}
+
+/* 頁籤 */
+ul.tabs {
+	width: 100%;
+	border-bottom: solid 1px #999;
+	margin:0;
+	height:25px;
+	padding:0;
+}
+ul.tabs li {
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 1px -1px 0;
+	border: solid 1px #999;
+	border-left: solid 1px #999;
+}
+ul.tabs li a {
+	display: block;
+	padding: 0 8px;
+	color: #767778;
+	text-decoration: none;
+	background:#dcddde;
+}
+ul.tabs li a:hover {
+	background:#fff;
+	text-decoration: none;
+	color:#006;
+}
+ul.tabs li.active, ul.tabs li.active a  {
+	background: #eee;
+	font-weight:bold;
+	border-bottom: solid 1px #eee;
+	color:#006;
+}
+div.tab_container {
+	clear: left;
+	width: 100%;
+	border:none;
+}
+div.tab_container{
+	padding: 8px 0 0 0;
+}
+div.tab_content {
+	min-height:150px;
+}
+
+/* ==========================================================================*/
+/* 以下為依據需求自訂 */
+.necessary
+{
+    color : red;
+}
+
+.blink {
+    padding: 5px 2px;
+    font-size: 14px;
+    color: red;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/*
+.blink {
+    font-size: 14px;
+    color : red;
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    81% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+*/
+
+.readonly{
+    color: #660000;
+    background-color: #ffffcc;
+    border-width: 1px;
+    border-color: #FFFFEC;
+    border-bottom: #000080 1px solid;
+    border-left: #999999 1px solid;
+    border-right: #000080 1px solid;
+    border-top: #999999 1px solid;
+}
+
+input.Online
+{
+    display:inline-block;
+    /*width:88px;*/
+    text-align:center;
+    cursor: pointer;
+    border:0px #ccc solid;
+    font-size:18px;
+}
+
+input.Online:hover{
+    color:#FFF;
+    text-decoration:none;
+    /*background-color:#7f7f7f;
+    border:1px #666 solid;*/
+}
+
+input.Online_Button3{
+    background:url('../Online/images/three.png') no-repeat left;
+    padding:3px 3px 3px 3px;
+    height:40px;
+    width:90px;
+}
+
+input.Online_Button5{
+    background:url('../Online/images/five.png') no-repeat left; 
+    padding:3px 3px 3px 3px;
+    height:40px;
+    width:174px;
+}
+
+input.Online_Button10{
+    background:url('../Online/images/ten.png') no-repeat left;
+    padding:3px 3px 3px 3px;
+    height:40px;
+    width:258px;
+}
+
+input.npoButton
+{
+    display:inline-block;
+    width:88px;
+    padding:8px 3px 3px 33px;
+    text-align:left;
+    cursor: pointer;
+    border:1px #ccc solid;
+    font-size:12px;
+}
+
+/* This css button was generated by css-button-generator.com */
+.css_btn_class {
+	font-size:18px;
+	/*font-family:Arial;*/
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #eeb44f;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #ffce79 5%, #eeaf41 100% );
+	background:-ms-linear-gradient( top, #ffce79 5%, #eeaf41 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce79', endColorstr='#eeaf41');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffce79), color-stop(100%, #eeaf41) );
+	background-color:#ffce79;
+	display:inline-block;
+    /*
+	text-shadow:1px 1px 0px #ce8e28;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #fceaca;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #fceaca;
+ 	box-shadow:inset 1px 1px 0px 0px #fceaca;
+        */
+	color:black;
+    cursor: pointer;
+}.css_btn_class:hover {
+    background: -moz-linear-gradient( center top, #eeaf41 5%, #ffce79 100% );
+    background: -ms-linear-gradient( top, #eeaf41 5%, #ffce79 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeaf41', endColorstr='#ffce79');
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #eeaf41), color-stop(100%, #ffce79) );
+    background-color: #eeaf41;
+    color: blue;
+    text-decoration: underline;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+ .css_btn_class_login {
+	font-size:18px;
+	/*font-family:Arial;*/
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #eeb44f;
+	padding:9px 18px;
+	text-decoration:none;
+	background:-moz-linear-gradient( center top, #ffce79 5%, #eeaf41 100% );
+	background:-ms-linear-gradient( top, #ffce79 5%, #eeaf41 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffce79', endColorstr='#eeaf41');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #ffce79), color-stop(100%, #eeaf41) );
+	background-color:#ffce79;
+	display:inline-block;
+    /*
+	text-shadow:1px 1px 0px #ce8e28;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #fceaca;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #fceaca;
+ 	box-shadow:inset 1px 1px 0px 0px #fceaca;
+    */
+	color:blue;
+    cursor: pointer;
+}.css_btn_class_login:hover {
+    background: -moz-linear-gradient( center top, #eeaf41 5%, #ffce79 100% );
+    background: -ms-linear-gradient( top, #eeaf41 5%, #ffce79 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeaf41', endColorstr='#ffce79');
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(5%, #eeaf41), color-stop(100%, #ffce79) );
+    background-color: #eeaf41;
+    color: red;
+    text-decoration: underline;
+}.css_btn_class_login:active {
+	position:relative;
+	top:1px;
+}
+/* This css button was generated by css-button-generator.com */
+
+
+/*
+GridView 的上下頁
+*/
+.pager a:hover
+{
+    cursor: pointer;
+    text-decoration:none;
+}
+
+/*
+功能鍵
+*/
+input.npoButton:hover{
+    color:#FFF;
+    text-decoration:none;
+    background-color:#7f7f7f;
+    border:1px #666 solid;
+}
+
+input.npoButton_Search{
+    background:url(../images/toolbar_search.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_New{
+    background:#dcddde url('../images/toolbar_new.gif') no-repeat 6px 6px;
+    margin-left: 0px;
+    height: 34px;
+}
+
+input.npoButton_Modify{
+    background:url(../images/toolbar_modify.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Del{
+    background:url(../images/toolbar_del.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Exit{
+    background:url(../images/toolbar_exit.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Save{
+    background:url(../images/toolbar_save.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_DelFolder{
+    background:url(../images/toolbar_delfolder.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Download{
+    background:url(../images/toolbar_download.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+
+input.npoButton_Export{
+    background:url(../images/toolbar_export.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_FamilyTree{
+    background:url(../images/toolbar_familytree.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Group{
+    background:url(../images/toolbar_group.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Folder{
+    background:url(../images/toolbar_folder.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_NewFolder{
+    background:url(../images/toolbar_newfolder.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_DelFolder{
+    background:#dcddde url('../images/toolbar_delfolder.gif') no-repeat 6px 6px;
+    margin-left: 0px;
+    height: 34px;
+}
+
+input.npoButton_NextStep{
+    background:url(../images/toolbar_nextstep.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_PrevStep{
+    background:url(../images/toolbar_prevstep.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Print{
+    background:url(../images/toolbar_print.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_pw{
+    background:url(../images/toolbar_pw.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Single{
+    background:url(../images/toolbar_single.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Submit{
+    background:url(../images/toolbar_submit.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Cancel{
+    background:url(../images/toolbar_cancel.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Upload{
+    background:url(../images/toolbar_upload.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Excel{
+    background:#dcddde url('../images/icon_xls.gif') no-repeat 6px 6px;
+    height: 34px;
+}
+
+input.npoButton_Download{
+    background:url(../images/toolbar_download.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+input.npoButton_Txt{
+    background:url(../images/icon_TXT.gif) no-repeat left #dcddde;
+    background-position:6px;
+    height: 34px;
+}
+
+.tabNormal {
+	padding:1px;
+	text-decoration:none;
+	width:120px;
+	background:#ffffff url(../images/toolbar_bg.gif) center bottom;
+	border:1px #ccc solid;
+	margin:0px;
+	text-align:center;
+	cursor: pointer;
+	height:26px;
+}
+
+.tabSelected {
+	padding:1px;
+	text-decoration:none;
+	width:120px;
+	background:#FFFFFF;
+	border:1px #ccc solid;
+	margin:0px;
+	text-align:center;
+	cursor: pointer;
+	height:26px;
+}
+
+/* 自訂資料表格 */
+.table_info{
+	padding:2px;
+	border:#C0C0C0 solid 1px;
+	background:#fff;
+	border-collapse: collapse
+}
+.table_info th{
+	color:#111111;
+	background:#FFE1AF;
+	line-height:18px;
+	vertical-align:middle;
+	padding:2px;
+	border:#999 solid 1px;
+}
+.table_info td{
+	border:#ccc solid 1px;
+	line-height:18px;
+	vertical-align:middle;
+	padding:2px;
+}
+.table_info tr{
+	color: #666;
+}

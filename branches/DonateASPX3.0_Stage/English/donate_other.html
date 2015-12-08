@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>GOODTV其他方式奉獻</title>
+    <script type="text/javascript" src="../include/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../include/jquery-ui-1.8.18.custom/development-bundle/ui/jquery.ui.core.js"></script>
+    <script type="text/javascript" src="../include/jquery-ui-1.8.18.custom/development-bundle/ui/jquery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="../include/jquery-ui-1.8.18.custom/development-bundle/ui/i18n/jquery.ui.datepicker-zh-TW.js"></script>
+    <link type="text/css" rel="stylesheet" media="all" href="../include/jquery-ui-1.8.18.custom/development-bundle/themes/ui-lightness/jquery.ui.all.css" />
+
+    <style type="text/css">
+        body {
+	        background-color: #CCC;
+	        margin-top: 0px;
+	        text-align: center;
+        }
+        body,td,th {
+	        font-size: 12px;
+	        color: #000;
+	        text-align: left;
+        }
+        a:link {
+	        text-decoration: none;
+        }
+        a:visited {
+	        text-decoration: none;
+        }
+        a:hover {
+	        text-decoration: underline;
+        }
+        a:active {
+	        text-decoration: none;
+        }
+    </style>
+    <style type="text/css">
+        #header, #container{
+	        width:955px;
+	        clear:both;
+        }
+        #header{
+	        height:70px;
+	        background:url("images/main_header_background.jpg") repeat-x;
+        }
+        #logo{
+	        float:left;
+	        margin:0px;
+	        margin-left:21px;
+        }
+        #logo img{
+            border:0;
+        }
+        #newsletter-btn{
+	        float:left;
+	        display:block;
+	        width:166px;
+	        height:28px;
+	        background:url("images/newsletter-btn.png") no-repeat;
+	        margin-left:570px;
+	        cursor:pointer;
+        }
+        #tv_station{
+	        list-style:none;
+	        float:left;
+	        margin:0;
+	        padding:0;
+	        margin-left:21px;
+	        margin-top:-7px;
+        }
+        #tv_station li{
+	        float:left;
+        }
+        #tv_station li > .btn{
+	        display:block;
+	        width:78px;
+	        height:49px;
+	        cursor:pointer;
+        }
+        #tv_station li > .oneChannel_btn{
+	        background: url("images/btn_oneChannel_o.jpg") no-repeat;
+        }
+        #tv_station li > .twoChannel_btn{
+	        background: url("images/btn_twoChannel_o.jpg") no-repeat;
+        }
+
+        #tv_station li > .nothASite_btn{
+	        background: url("images/btn_NothASite_o.jpg") no-repeat;
+        }
+
+        #tv_station li > .hkSite_btn{
+	        background: url("images/btn_HKSite_o.jpg") no-repeat;
+        }
+
+        #tv_station li > .prodSite_btn{
+	        width:93px;
+	        background:url("images/btn_prodSite_o.jpg") no-repeat;
+        }
+        
+        #tv_station li > .fb_btn{
+            width:30px;           
+	        background: url("images/icon_face_16x16.jpg") no-repeat;
+        }
+        
+        #tv_station li > .g_btn{
+            width:20px;
+	        background: url("images/icon_Google.jpg") no-repeat;
+        }
+        
+        #tv_station a:LINK, #tv_station a:VISITED{
+	        text-decoration:none;
+	        color:#848689;
+	        font-size:14px;
+	        letter-spacing:3px;
+        }
+        #tv_station a:HOVER, #tv_station a:ACTIVE{
+	        text-decoration:none;
+	        color:#ea3c20;
+        }
+
+        /* search form */
+        #search_form{
+	        float:right;
+	        margin-top:8px;
+	        margin-right:20px;
+        }
+
+        #search_form input{
+	        padding:3px;
+        }
+        #navigator{
+	        width:100%;
+	        height:32px;
+	        background:url("images/main_navigator_background.png") repeat-x;
+        }
+
+        #navigator_line{
+	        margin:0 0 0 42px;
+	        line-height:32px;
+	        vertical-align: middle;
+        }
+
+        #navigator_line a{
+	        display: block;
+	        float: left;
+	        font-size: 12px;
+	        text-decoration:none;
+        }
+
+        #navigator_line .nav_item{
+	        color: #333;
+        }
+
+        #navigator_line .nav_add{
+	        width: 12px;
+	        height: 12px;
+	        background: url("images/main_navigator_add.png") no-repeat;
+	        margin: 9px 5px;
+        }
+        #top_menu{
+	        float:right;
+	        list-style:none;
+	        margin:0px;
+	        margin-right:20px;
+        }
+
+        #top_menu li{
+	        float:left;
+	        margin:0 6px;
+	        list-style:none;
+        }
+
+        #top_menu a{
+	        line-height:32px;
+	        vertical-align:middle;
+	        font-size:12px;
+	        color:#44507b;
+        }
+
+        #top_menu a:LINK,
+        #top_menu a:VISITED{
+	        text-decoration:none;
+        }
+
+        #top_menu a:HOVER,
+        #top_menu a:ACTIVE{
+	        text-decoration:underline;
+        }
+
+        #top_menu a.active{
+	        color:#e40448;
+        }
+        
+        /* donate_div */
+        #donate_banner{
+            background-color:#FFFFFF;
+        }
+        #donate_title{
+            margin-top:20px;	        
+	        margin-left:25px;
+        }
+        .cse_input{
+        /*margin:0px !important;*/
+        width:150px !important;
+        padding:0px !important;
+        -webkit-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        border-radius: 5px !important;
+        background: url(images/google_custom_search_watermark.gif);
+        background-position:50px 0px;
+        background-repeat:no-repeat;
+        }
+
+        .cse_top{
+        margin-top:7px !important;
+        }
+        .cse_img{
+        margin-top:12px !important;
+        cursor: pointer;
+        }
+        .cse_tag{
+        margin-top:16px !important;
+        }
+    </style>
+    <script type="text/javascript">
+        function MM_preloadImages() { //v3.0
+            var d = document; if (d.images) {
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; } 
+            }
+        }
+        function MM_swapImgRestore() { //v3.0
+            var i, x, a = document.MM_sr; for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+        }
+        function MM_findObj(n, d) { //v4.01
+            var p, i, x; if (!d) d = document; if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                d = parent.frames[n.substring(p + 1)].document; n = n.substring(0, p);
+            }
+            if (!(x = d[n]) && d.all) x = d.all[n]; for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+            for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+            if (!x && d.getElementById) x = d.getElementById(n); return x;
+        }
+
+        function MM_swapImage() { //v3.0
+            var i, j = 0, x, a = MM_swapImage.arguments; document.MM_sr = new Array; for (i = 0; i < (a.length - 2); i += 3)
+                if ((x = MM_findObj(a[i])) != null) { document.MM_sr[j++] = x; if (!x.oSrc) x.oSrc = x.src; x.src = a[i + 2]; }
+        }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            /*$('.oneChannel_btn').hover(
+		        function () {
+		            $(this).css('background-image', 'url(images/btn_oneChannel_down.jpg)');
+		        },
+		        function () {
+		            $(this).css('background-image', 'url(images/btn_oneChannel_o.jpg)');
+		        }
+	        );
+
+            $('.twoChannel_btn').hover(
+		        function () {
+		            $(this).css('background-image', 'url(images/btn_twoChannel_down.jpg)');
+		        },
+		        function () {
+		            $(this).css('background-image', 'url(images/btn_twoChannel_o.jpg)');
+		        }
+	        );
+
+            $('.nothASite_btn').hover(
+		        function () {
+		            $(this).css('background-image', 'url(images/btn_NothASite_down.jpg)');
+		        },
+		        function () {
+		            $(this).css('background-image', 'url(images/btn_NothASite_o.jpg)');
+		        }
+	        );
+
+            $('.hkSite_btn').hover(
+		        function () {
+		            $(this).css('background-image', 'url(images/btn_HKSite_down.jpg)');
+		        },
+		        function () {
+		            $(this).css('background-image', 'url(images/btn_HKSite_o.jpg)');
+		        }
+	        );
+
+            $('.prodSite_btn').hover(
+		        function () {
+		            $(this).css('background-image', 'url(images/btn_prodSite_down.jpg)');
+		        },
+		        function () {
+		            $(this).css('background-image', 'url(images/btn_prodSite_o.jpg)');
+		        }
+	        );*/
+
+            $("#date").datepicker({
+                changeYear: true,
+                changeMonth: true,
+                showOn: "button",
+                buttonImage: "images/calendar.gif",
+                buttonImageOnly: true,
+                yearRange: "2000:2015",
+                dateFormat: 'yy-mm-dd'
+            });
+            $("#date").focus(function () {
+                $(this).val('');
+                $("#date").datepicker("show");
+            });
+            //更換網址
+            var host = $(location).attr('host'); //site url domain and host 沒有 http://
+
+            var url_homepage = host.replace(/donate3/g, "http://www"); //首頁
+            var url_second = host.replace(/donate3/g, "http://www") + '/?second';  // 二台
+            var url_video = host.replace(/donate3/g, "http://www") + '/video';  //節目總覽
+            var url_schedule = host.replace(/donate3/g, "http://www") + '/video/index.php/schedule';  //節目時間表
+            var url_daily = host.replace(/donate3/g, "http://www") + '/daily';  // 每日靈糧
+            var url_news = host.replace(/donate3/g, "http://www") + '/good-news';  //好消息月刊
+            var url_about = host.replace(/donate3/g, "http://www") + '/about';  //關於好消息
+            var url_service = host.replace(/donate3/g, "http://www") + '/service';  //線上客服
+            var url_search = host.replace(/donate3/g, "http://www") + '/video/index.php/video/search';  //搜尋表單
+            //替換掉link的屬性
+            $('#url_logo').attr("href", url_homepage);
+            $('#setStationOneBtn').attr("href", url_homepage);
+            $('#url_navigator').attr("href", url_homepage);
+            $('#url_2').attr("href", url_second);
+            $('#url_video').attr("href", url_video);
+            $('#url_schedule').attr("href", url_schedule);
+            $('#url_daily').attr("href", url_daily);
+            $('#url_news').attr("href", url_news);
+            $('#url_about').attr("href", url_about);
+            $('#url_service').attr("href", url_service);
+            $('#search').attr("action", url_search);
+        });
+        //img click sumbit
+        /*
+        $('.cse_img').click(function () {
+            $('.cse_form').submit();
+        });*/
+
+        //input text focus 移除浮水印背景圖
+        $('.cse_input').click(function () {
+            // $(this).val('wwww');
+            $(this).css('background', 'white');
+            //alert('qq');
+        });
+
+        //input text foucus out 加上浮水印背景圖
+        $('.cse_input').blur(function () {
+            if ($('.cse_input').val() == '') {
+                $(this).css('background', 'url(images/google_custom_search_watermark.gif) 50px 0px');
+            } else { }
+        });
+    </script>
+</head>
+<body onload="MM_preloadImages('images/.jpg','images/btn_金融機構奉獻_down.jpg','images/btn_授權書奉獻_down.jpg','images/btn_線上徵信_down.jpg','images/btn_線上奉獻_down.jpg')">
+    <table width="949" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="5">
+                <div id="header">
+                    <h1 id="logo">
+    	                <a id="url_logo">
+                            <img height="70" width="162" id="good_tv_logo" title="好消息電視台" alt="好消息電視台" src="../Online/images/logo.jpg" />
+                        </a>
+                    </h1>
+                    <a id="newsletter-btn" target="_blank" href="http://w2.goodtv.org/newsletter/"></a>
+                    <ul id="tv_station">
+    	                <li><a id="setStationOneBtn" class="btn oneChannel_btn"></a></li>
+                        <li><a id="url_2" class="btn twoChannel_btn"></a></li>
+                        <li><a target="_blank" href="http://www.goodtvusa.tv/site/" class="btn nothASite_btn"></a></li>
+                        <li><a target="_blank" href="http://www.goodtvhk.tv/" class="btn hkSite_btn"></a></li>
+                        <li><a target="_blank" href="http://shop.goodtv.tv/" class="btn prodSite_btn"></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/goodtv" class="btn fb_btn"></a></li>
+                        <li><a target="_blank" href="https://plus.google.com/112408150725302065226" class="btn g_btn" rel="publisher"></a></li>
+                        <li style="margin-left:60px;">
+                            <form id="search" class='cse_form cse_top' action="" method="get" target='_blank'>
+                                <input name='q' class='cse_input cse_top' type='text'>	
+                                <input type="image" src='images/search_best.jpg' />		
+                            </form>
+                        </li>
+                    </ul>
+                    <div id="search_form">       
+                    </div>
+                </div>
+                <div id="container">
+	                <div id="navigator">
+    	                <div id="navigator_line">
+                            <a id="url_navigator" class="nav_item btn">首頁</a>
+                            <a class="nav_add"></a><a class="nav_item">支持與奉獻</a>
+                        </div>
+                        <ul id="top_menu">
+        	                <li> <a id="url_video" class="btn">節目總覽</a> </li>
+                            <li> <a id="url_schedule" class="btn">節目時間表</a> </li>
+                            <li> <a id="url_daily" class="btn">每日靈糧</a> </li>
+                            <li> <a id="url_news" class="btn">好消息月刊</a> </li>
+                            <li> <a id="url_about" class="btn">關於好消息</a> </li>
+                            <li> <a href="donate_index.html" class="btn active">支持與奉獻</a> </li>
+                            <li> <a id="url_service" class="btn">線上客服</a> </li>
+                        </ul>
+                    </div>
+                </div> 
+                    
+                <div id="donate_banner">
+                    <img id="donate_title" class="title_image" src="../Online/images/donate_title.jpg" alt="支持與奉獻" title="支持與奉獻"/>
+                </div>  
+            </td>
+        </tr>
+        <tr>
+            <td width="3" valign="top" bgcolor="#FFFFFF">
+                &nbsp;
+            </td>
+            <td width="47" bgcolor="#FFFFFF">
+                &nbsp;
+            </td>
+            <td width="204" valign="top" bgcolor="#FFFFFF">
+                <table width="200" border="0" align="left" cellpadding="1" cellspacing="1">
+                    <tr>
+                        <td align="left">
+                            <a href="donateonlineall.aspx" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('donate_online','','images/btn_線上奉獻_down.jpg',1)">
+                                <img src="images/btn_線上奉獻_O.jpg" name="donate_online" alt="線上奉獻頁面" width="198" height="36" border="0" id="donate_online" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="DonateQry.aspx" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('DonateQry','','images/btn_線上徵信_down.jpg',1)">
+                                <img src="images/btn_線上徵信_O.jpg" alt="線上徵信" name="DonateQry" width="198" height="36"
+                                    border="0" id="DonateQry" /></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="Authorization_Letter.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Authorization Letter','','images/btn_授權書奉獻_down.jpg',1)">
+                                <img src="images/btn_授權書奉獻_O.jpg" alt="下載授權書" name="Authorization Letter" width="198"
+                                    height="91" border="0" id="Authorization Letter" /></a>
+                        </td>
+                    </tr>                 
+                    <tr>
+                        <td>
+                            <a href="financial.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('financial institution','','images/btn_金融機構奉獻_down.jpg',1)">
+                                <img src="images/btn_金融機構奉獻_O.jpg" alt="金融機構" name="financial institution" width="198"
+                                    height="91" border="0" id="financial institution" /></a>   
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/btn_其他奉獻_down.jpg" alt="其他奉獻" name="Image9" width="198" height="91" border="0" id="Image9" />                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="25" valign="bottom">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="bottom">
+                            <img alt="" src="images/pic_index_3.jpg" width="195" height="121" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="16" align="left" bgcolor="#FFFFFF">
+                &nbsp;
+            </td>
+            <td width="686" bgcolor="#FFFFFF">
+                <table width="680" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td colspan="4" align="right">
+                            <img alt="" src="images/Titlebar_其他奉獻.jpg" width="650" height="25" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="left" bgcolor="#FFFFFF">
+                            <strong><font color="#137BC3" size="5px">■</font><font size="2.5px">其他奉獻方式</font></strong>
+                        </td>                        
+                    </tr>                    
+                    <tr>
+                        <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="5">
+                          <tr>
+                            <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="5">
+                              <tr>
+                                <td width="15%" align="center" height="30" bgcolor="#899DA9">屬 性</td>
+                                <td width="39%" align="center" height="30" bgcolor="#FFCCCC"><strong>現 金 奉 獻</strong></td>
+                                <td width="46%" align="center" height="30" bgcolor="#FFCC66"><strong>支 票 奉 獻</strong></td>
+                              </tr>
+                              <tr>
+                                <td height="50" align="center" bgcolor="#E4EDED">方式</td>
+                                <td height="50" align="left" bgcolor="#F0F0F0">請以現金袋郵寄至本機構或親洽本機構由專人為您處理。</td>
+                                <td height="50" align="left" bgcolor="#F0F0F0">請開具抬頭為「財團法人加百列福音傳播基金會」的禁止背書轉讓劃線支票</td>
+                              </tr>
+                              <tr>
+                                <td height="30" align="center" bgcolor="#D1D9DE">備註</td>
+                                <td height="30" align="left" bgcolor="#FFE8E8">現金袋每袋金額上限為新台幣一萬元整。</td>
+                                <td height="30" align="left" bgcolor="#FFFF99">在支票左上角畫雙斜線，以掛號郵寄至本機構收。</td>
+                              </tr>
+                              <tr>
+                                <td height="30" align="center" bgcolor="#E4EDED">地址</td>
+                                <td height="30" colspan="2" bgcolor="#F0F0F0">23544 新北市中和區中正路911號6樓   捐款服務組</td>
+                              </tr>
+                            </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                        <td height="20px"></td>
+                    </tr>
+                    <tr>                        
+                        <td align="left" bgcolor="#FFFFFF">
+                            <strong><font color="#137BC3" size="5px">■</font><font size="2.5px">海外地區為台灣GOODTV奉獻方式 (國外匯款)</font></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><table width="650" border="0" cellspacing="0" cellpadding="5">
+                          <tr>
+                            <td colspan="2"><table width="650" border="0" cellspacing="1" cellpadding="5">
+                                <tr>                               
+                                    <td colspan="2" align="center" bgcolor="#FFD5BF">項 目Items</td>
+                                    <td width="45%" align="center" bgcolor="#FFD5BF">國外匯款 US$ Account</td>                                    
+                                </tr>
+                                <tr>
+                                  <td width="13%" rowspan="3" align="center" bgcolor="#FFFFD2">收款人 Beneficiary</td>
+                                  <td width="13%" align="center" bgcolor="#F5F4E0">戶名Name</td>
+                                  <td align="center" bgcolor="#F5F4E0">財團法人加百列福音傳播基金會<br />
+                                        （ Gabriel Broadcasting Foundation ）</td>
+                                </tr>
+                                <tr>
+                                  <td width="13%" height="53" align="center" bgcolor="#F3EACB">地址Address</td>
+                                  <td align="center" bgcolor="#F3EACB">23544 新北市中和區中正路911號6樓<br />
+                                  6F, No.911, Zhongzheng Rd., Zhonghe Dist., New Taipei City 235, Taiwan , R.O.C.</td>
+                                </tr>
+                                <tr>
+                                    <td width="13%" align="center" bgcolor="#F5F4E0">帳號 Account No.</td>
+                                    <td align="center" bgcolor="#F5F4E0">066-007-057777</td>
+                                </tr>
+                                <tr>
+                                  <td width="0%" rowspan="3" align="center" bgcolor="#E2EDEF">銀行 A/C with Bank</td>
+                                  <td width="13%" align="center" bgcolor="#E9F5F1">銀行名稱Name</td>
+                                  <td bgcolor="#E9F5F1" align="center">台灣銀行中和分行<br />
+                                    (BANK OF TAIWAN, CHUNG HO BRANCH)</td>
+                                </tr>
+                                <tr>
+                                  <td align="center" bgcolor="#D0E8EE">銀行地址Address</td>
+                                  <td bgcolor="#D0E8EE" align="center">23558新北市中和區中山路二段253號<br />
+                                  No.253, Sec. 2, Zhongshan Rd., Zhonghe Dist., New Taipei City 235, Taiwan (R.O.C.) <br /></td>
+                                </tr>
+                                <tr>
+                                    <td align="center" bgcolor="#E9F5F1">銀行代碼Swift Code</td>
+                                    <td bgcolor="#E9F5F1"  align="center">BKTWTWTP066</td>
+                                </tr>
+                                <tr>
+                                    <td height="30" colspan="3" align="center" bgcolor="#E7E0ED">&#8226;您也可以 直接點選<a href="donateonlineall.aspx"><strong>線上奉獻</strong></a>以信用卡刷卡方式,  進行線上刷卡奉獻</td>
+                                </tr></table></td>
+                          </tr>
+                        </table></td>
+                    </tr>                    
+                    <tr align="right">
+                        <td width="650" height="30">
+                            <a href="donate_index.html">&#8250; 回奉獻首頁</a>
+                        </td>
+                    </tr>
+                </table>
+            </ td>
+        </tr>
+        <tr>
+            <td height="100" colspan="5" align="right" valign="bottom" bgcolor="#FFFFFF">
+                <img alt="page_botten" src="images/page_botten.jpg" width="956" height="75" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

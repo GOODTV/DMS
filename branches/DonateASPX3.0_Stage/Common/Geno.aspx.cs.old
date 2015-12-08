@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+
+public partial class Common_Geno : BasePage 
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            HFD_Uid.Value = Util.GetQueryString("Uid");
+            HFD_Table_Name.Value = Util.GetQueryString("Table_Name");
+            HFD_Field_Name.Value = Util.GetQueryString("Field_Name");
+
+            string XML = NpoDB.GetScalarS("select " + this.HFD_Field_Name.Value + " from " + this.HFD_Table_Name.Value + " where uid = '" + this.HFD_Uid.Value + "' ", null);
+            this.HFD_XML.Value = XML;
+        }
+    }
+
+    protected void btn_SaveXML_Click(object sender, EventArgs e)
+    {
+        //****變數宣告****//
+        Dictionary<string, object> dict = new Dictionary<string, object>();
+        string strSql, uid, XML;
+
+        //****變數設定****//
+        uid = this.HFD_Uid.Value;
+        XML = this.HFD_XML.Value;
+
+        //****設定查詢****//
+        strSql = " update " + this.HFD_Table_Name.Value + " set ";
+        strSql += " " + this.HFD_Field_Name.Value + " = @xml";
+        strSql += " where uid = @uid";
+
+        dict.Add("uid", uid);
+        dict.Add("xml", XML);
+
+        //****執行語法****//
+        NpoDB.ExecuteSQLS(strSql, dict);
+        Session["Msg"] = "存檔成功";
+        base.ShowSysMsg();
+    }
+}

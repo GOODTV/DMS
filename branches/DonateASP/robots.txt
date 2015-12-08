@@ -1,0 +1,11 @@
+User-agent: * 
+
+Disallow: /admin/
+Disallow: /contribute/
+Disallow: /donation/
+Disallow: /ecbank/
+Disallow: /fckeditor/
+Disallow: /images/
+Disallow: /include/
+Disallow: /sysmgr/
+Disallow: /upload/
